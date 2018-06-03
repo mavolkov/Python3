@@ -1,8 +1,7 @@
-a = int(input())
-while a < 8:
-    a -= 1
-    if a == 4:
+while True:
+    x = int(input())
+    if x < 10:
         continue
-    print(a)
-    if a == 0:
+    elif x > 100:
         break
+    print(x)
