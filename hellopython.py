@@ -1,9 +1,8 @@
 a = int(input())
-b = int(input())
-m = a*b
-while a != 0 and b != 0:
-    if a > b:
-        a %= b
-    else:
-        b %= a
-print(m // (a+b))
+while a < 8:
+    a -= 1
+    if a == 4:
+        continue
+    print(a)
+    if a == 0:
+        break
