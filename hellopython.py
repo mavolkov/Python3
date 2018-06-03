@@ -1,7 +1,4 @@
-while True:
-    x = int(input())
-    if x < 10:
-        continue
-    elif x > 100:
-        break
-    print(x)
+for i in range(6):
+    for i in range(6):
+        print('*', end=' ')
+    print()
