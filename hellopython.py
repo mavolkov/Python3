@@ -1,9 +1,9 @@
-#for i in range(1000):
-x=input()
-#x=str(i)
-if x[-1]=='1' and int(x)%10!=0 and x[-2:] != '11':
-    print(x, 'программист')
-elif (x[-1] in ['2','3','4']) and x[-2:] not in ['12','13','14']:
-    print(x, 'программиста')
-elif x[-1] in ['0','5','6','7','8','9'] or x[-2:] in ['11','12','13','14']:
-        print(x, 'программистов')
+a = int(input())
+b = int(input())
+m = a*b
+while a != 0 and b != 0:
+    if a > b:
+        a %= b
+    else:
+        b %= a
+print(m // (a+b))
