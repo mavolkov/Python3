@@ -1,14 +1,10 @@
-a, b, c, d = int(input()),int(input()),int(input()),int(input())
-
-#строка 1
-print('\t', end='')
-for i in range(c, d+1):
-    print(i,  end= '\t')
-print()
-
-#остальные строки
+a, b = int(input()),int(input())
+s=0;
+n=0;
 for i in range(a, b+1):
-    print(i, end='\t')
-    for j in range(c, d+1):
-        print(i*j, end='\t')
-    print()
+    if i % 3 == 0:
+        s += i;
+        n +=1;
+
+print(s/n)
+
