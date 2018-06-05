@@ -1,9 +1,13 @@
-sum = 0
-sqr = 0
-while 1:
-    x = int(input())
-    sum += x
-    sqr += x**2
-    if sum == 0:
-        break
-print(sqr)
+x = int(input())
+n = 0
+k = 0
+s = ''
+while n < x:
+    k += 1
+    for i in range(k):
+        if n == x:
+            break
+        print(k, end=' ')
+        n += 1
+
+
