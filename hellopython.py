@@ -1,12 +1,14 @@
-s=input()
+s = input()
+bykvi = []
+kolvo = []
 
-n=0;
-if s.count('g') != -1:
-    n += s.count('g')
-if s.count('c') != -1:
-    n += s.count('c')
-if s.count('G') != -1:
-    n += s.count('G')
-if s.count('C') != -1:
-    n += s.count('C')
-print(n/len(s)*100)
+bykvi.append(s[0])
+kolvo.append(1)
+
+i=0
+while s[i] == s[i+1]:
+        kolvo[i] += 1
+        i += 1
+
+print(bykvi[0], end='')
+print(kolvo[0], end='')
