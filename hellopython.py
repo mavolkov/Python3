@@ -1,5 +1,4 @@
-s = input()
-list = s.split()
-for i in range(len(list)):
-        list[i] = int(list[i])
+list = [int(i) for i in input().split()]
 print(sum(list))
+
+
