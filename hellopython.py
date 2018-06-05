@@ -1,14 +1,13 @@
 s = input()
-bykvi = []
-kolvo = []
+result = ''
 
-bykvi.append(s[0])
-kolvo.append(1)
-
-i=0
-while s[i] == s[i+1]:
-        kolvo[i] += 1
-        i += 1
-
-print(bykvi[0], end='')
-print(kolvo[0], end='')
+n=1
+for i in range(1,len(s)):
+        if s[i] == s[i-1]:
+                n += 1
+        else:
+                result += s[i-1] + str(n)
+                n = 1
+result += s[len(s)-1] + str(n)
+n = 1
+print(result)
