@@ -1,13 +1,9 @@
+lst = [int(i) for i in input().split()]
 x = int(input())
-n = 0
-k = 0
-s = ''
-while n < x:
-    k += 1
-    for i in range(k):
-        if n == x:
-            break
-        print(k, end=' ')
-        n += 1
 
-
+if x in lst:
+    for i in range(len(lst)):
+        if x == lst[i]:
+            print(i, end=' ')
+else:
+    print('Отсутствует')
