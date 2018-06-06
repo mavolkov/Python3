@@ -1,9 +1,10 @@
-lst = [int(i) for i in input().split()]
-x = int(input())
+n = float(input())
 
-if x in lst:
-    for i in range(len(lst)):
-        if x == lst[i]:
-            print(i, end=' ')
-else:
-    print('Отсутствует')
+def f(x):
+    if x <= -2:
+        return 1-(x+2)**2
+    elif -2 < x <= 2:
+        return -x/2
+    elif 2 < x:
+        return (x-2)**2 + 1
+print(f(n))
