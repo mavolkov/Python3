@@ -1,4 +1,3 @@
-s = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
-print(s)
-for i in s:
-    print(i)
+d = {1:'один', 2:'два'}
+print(type(d))
+print(d[1])
