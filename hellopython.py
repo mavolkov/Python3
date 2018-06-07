@@ -1,13 +1,4 @@
-s = set()
-for i in range(10000000):
-    s.add(i)
-
-x = 0
+s = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+print(s)
 for i in s:
-    print(i, end='\t')
-    x += 1
-    if x % 20 == 0:
-        print()
-
-print()
-print(555 in s)
+    print(i)
