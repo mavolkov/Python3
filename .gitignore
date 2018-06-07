@@ -3,3 +3,5 @@
 .DS_Store
 \vens
 *.xml
+*.xml
+.idea/workspace.xml

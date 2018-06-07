@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d93b53-0fb9-47db-9183-633a696a610d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/hellopython.py" beforeDir="false" afterPath="$PROJECT_DIR$/hellopython.py" afterDir="false" />
-    </list>
+    <list default="true" id="d2d93b53-0fb9-47db-9183-633a696a610d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="hellopython.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hellopython.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="270">
+              <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -305,8 +303,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hellopython.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="270">
+          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
         </state>
       </provider>
     </entry>

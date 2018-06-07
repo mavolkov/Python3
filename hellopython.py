@@ -22,3 +22,4 @@ for x in list(zip(*lst)):
     print(*x)
 
 
+ 
