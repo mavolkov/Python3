@@ -12,7 +12,6 @@ def modify_list(l1):
             l1.pop(i)
 
 
-
 modify_list(lst)
 print(lst)
 
