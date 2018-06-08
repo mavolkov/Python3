@@ -9,3 +9,4 @@ for i in l:
 
 for key, value in d.items():
     print(key, value)
+
