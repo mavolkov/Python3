@@ -1,12 +1,11 @@
+# f(x) определена ранее
 d = {}
-l = [i.lower() for i in input().split()]
-
-for i in l:
-    if i not in d.keys():
-        d[i] = 1
+n = int(input())
+for i in range(n):
+    x = int(input())
+    if x in d.keys():
+        print(d[x])
     else:
-        d[i] +=1
-
-for key, value in d.items():
-    print(key, value)
+        print(f(x))
+        d[x] = f(x)
 
