@@ -1,23 +1,29 @@
 f = open('set.txt', 'r')
 f_out = open('out.txt', 'w')
-a = ''
-x = ''
+a = 'ёёёёё'
+d = {}
 for line in f:
-    for i in range(len(line)):
-        if line[i].isalpha():
-            if a == '':
-                a = line[i]
+    l = [i.lower() for i in line.split()]
+    for j in l:
+        if j.isalpha():
+            if j not in d.keys():
+                d[j.strip()] = 1
             else:
-                print(a*int(x), end='')
-                f_out.write(a*int(x))
-                a = line[i]
-                x = ''
-        else:
-            x += line[i]
-    print(a*int(x))
-    f_out.write(a * int(x) + '\n')
-    a = ''
-    x = ''
+                d[j] += 1
 
+print(d)
+
+for key, value in d.items():
+    if value == max(d.values()):
+        if key < a:
+            a = key
+#print('самое частое слово: ', a, max(d.values()))
+#print(d)
+f_out.write(a + ' ' + str(max(d.values())))
 f.close()
 f_out.close()
+
+
+
+
+
