@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2d93b53-0fb9-47db-9183-633a696a610d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/hellopython.py" beforeDir="false" afterPath="$PROJECT_DIR$/hellopython.py" afterDir="false" />
-    </list>
+    <list default="true" id="d2d93b53-0fb9-47db-9183-633a696a610d" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -22,8 +20,8 @@
       <file leaf-file-name="hellopython.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/hellopython.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="226">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+            <state relative-caret-position="345">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
@@ -159,7 +157,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.56164384" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.56164384" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info content_ui="combo" id="Project" order="0" weight="0.34489796" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
@@ -357,8 +355,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hellopython.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
+        <state relative-caret-position="345">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
