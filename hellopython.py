@@ -1,13 +1,23 @@
-s = input()
-result = ''
-
-n=1
-for i in range(1,len(s)):
-        if s[i] == s[i-1]:
-                n += 1
+f = open('set.txt', 'r')
+f_out = open('out.txt', 'w')
+a = ''
+x = ''
+for line in f:
+    for i in range(len(line)):
+        if line[i].isalpha():
+            if a == '':
+                a = line[i]
+            else:
+                print(a*int(x), end='')
+                f_out.write(a*int(x))
+                a = line[i]
+                x = ''
         else:
-                result += s[i-1] + str(n)
-                n = 1
-result += s[len(s)-1] + str(n)
-n = 1
-print(result)
+            x += line[i]
+    print(a*int(x))
+    f_out.write(a * int(x) + '\n')
+    a = ''
+    x = ''
+
+f.close()
+f_out.close()
