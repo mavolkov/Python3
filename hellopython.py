@@ -1,23 +1,29 @@
-# Quick start документация requests:
-# http://docs.python-requests.org/en/master/user/quickstart/
 import requests
 
+uni_url = 'https://stepic.org/media/attachments/course67/3.6.3/'
+
 f = open('set.txt', 'r')
-url = f.readline().strip()  # читает адресную строку из файла, отрезает пробелы
+read = f.readline().strip()
+lastWord = read.split('/')[-1]
 f.close()
 
-r = requests.get(url)            # открывает адрес и уже читает файл
+#print(lastWord)
 
-'''
-filename = url.split('/')[-1]    # берем имя файла+расширение
+
+k = 0
+r = requests.get(uni_url + lastWord)
+
+while lastWord.split('.')[-1] == 'txt':
+    print(lastWord, '-', k, '-', lastWord.split('.')[-1] == 'txt')
+    k += 1
+    r = requests.get(uni_url + lastWord)
+    lastWord = r.text.strip()
+
+
+
+print()
+print(r.text)
+
+filename = 'result.txt'    # берем имя файла+расширение
 with open(filename, 'wb') as f:  # создает и открывает файл на запись в двоичном формате
     f.write(r.content)
-
-k = 0  # кол-во строк
-with open(filename, 'r') as f:
-    for line in f:
-        k += 1
-print(k)
-'''
-with open('out.txt', 'w') as f:
-    f.write(str(len(r.text.splitlines())))  # считает кол-во строк в загруженном файле
