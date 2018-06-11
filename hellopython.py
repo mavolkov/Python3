@@ -1,29 +1,53 @@
-import requests
+# читает игры из файла
+#games = []
+# with open('set.txt', 'r') as f:
+#    n = int(f.readline())
+#    for i in range(n):
+#        games.append((f.readline().strip()).split(';'))
+# for i in games:
+#     print(i)
+# print()
 
-uni_url = 'https://stepic.org/media/attachments/course67/3.6.3/'
+# читает игры на ввод
+games = []
+n = int(input())
+for i in range(n):
+    games.append((input().strip().split(';')))
 
-f = open('set.txt', 'r')
-read = f.readline().strip()
-lastWord = read.split('/')[-1]
-f.close()
+# отбираем команды
+teams = {}
+for i in range(n):
+    if games[i][0] not in teams:
+        teams[games[i][0]] = [0, 0, 0, 0, 0]
+    if games[i][2] not in teams:
+        teams[games[i][2]] = [0, 0, 0, 0, 0]
 
-#print(lastWord)
+for i in range(n):
+    if games[i][1] == games[i][3]:   # ничья
+        # +1 игра
+        teams[games[i][0]][0] += 1
+        teams[games[i][2]][0] += 1
+        # +1 ничья
+        teams[games[i][0]][2] += 1
+        teams[games[i][2]][2] += 1
+        # +1 балл
+        teams[games[i][0]][4] += 1
+        teams[games[i][2]][4] += 1
+    elif games[i][1] > games[i][3]:  # первая выиграла
+        teams[games[i][0]][0] += 1
+        teams[games[i][2]][0] += 1
+        teams[games[i][0]][1] += 1
+        teams[games[i][2]][3] += 1
+        teams[games[i][0]][4] += 3
+        teams[games[i][2]][4] += 0
+    else:                            # вотрая выиграла
+        teams[games[i][0]][0] += 1
+        teams[games[i][2]][0] += 1
+        teams[games[i][0]][3] += 1
+        teams[games[i][2]][1] += 1
+        teams[games[i][0]][4] += 0
+        teams[games[i][2]][4] += 3
 
-
-k = 0
-r = requests.get(uni_url + lastWord)
-
-while lastWord.split('.')[-1] == 'txt':
-    print(lastWord, '-', k, '-', lastWord.split('.')[-1] == 'txt')
-    k += 1
-    r = requests.get(uni_url + lastWord)
-    lastWord = r.text.strip()
-
-
-
+for key, value in teams.items():
+    print(key + ':' + str(value[0]), value[1], value[2], value[3], value[4])
 print()
-print(r.text)
-
-filename = 'result.txt'    # берем имя файла+расширение
-with open(filename, 'wb') as f:  # создает и открывает файл на запись в двоичном формате
-    f.write(r.content)
