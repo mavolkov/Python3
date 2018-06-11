@@ -1,33 +1,30 @@
-"""
-s = []
+'''
+s = set()
+l = []
 with open('set.txt', 'r') as f:
-    for i in range(4):
-        s.append(f.readline().strip())
+    n = int(f.readline())
+    for i in range(n):
+        s.add((f.readline().strip()).lower())
+    n = int(f.readline())
+    for i in range(n):
+        l.append((f.readline().strip()).lower())
 print(s)
-"""
+print(l)
+'''
 
-s = []
-for i in range(4):
-        s.append(input().strip())
+s = set()
+l = []
+n = int(input())
+for i in range(n):
+    s.add((input().strip()).lower())
+n = int(input())
+for i in range(n):
+    l.append((input().strip()).lower())
 
-coder = {}
-for i in range(len(s[0])):
-    coder[s[0][i]] = s[1][i]
-# for key, value in coder.items():
-#     print(key, '-', value)
-# print()
-
-decoder = {}
-for i in range(len(s[0])):
-    decoder[s[1][i]] = s[0][i]
-# for key, value in decoder.items():
-#     print(key, '-', value)
-# print()
-
-# coding
-for i in s[2]:
-    print(coder[i], end='')
-print()
-# decoding
-for i in s[3]:
-    print(decoder[i], end='')
+user_s = set()
+for i in l:
+    for j in i.split():
+        if j not in s:
+            user_s.add(j)
+for i in user_s:
+    print(i)
