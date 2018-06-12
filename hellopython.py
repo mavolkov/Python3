@@ -1,20 +1,44 @@
-l = []
-f = open('set.tsv', 'r')
-for line in f:
-    l.append(line.split())
+from numpy import *
+# '''
+a = array([1,2,3])
+print(a)
+print(a.ndim)   # размерность массива (одномерный, двумерный итд)
+print(a.shape)  # размеры массива(число строк столбцов итд)
 
+b = array([(1.5, 2, 3), (4, 5, 6)])  # создание двумерного массива из двух последовательностей чисел
+print(b)  # все числа имееют один тип - число с плавающей точкой
+print(b.ndim)
+print(b.shape)
+print(b.size)
 
-d = {}
-for i in range(1, 11+1):
-    d[i] = [0.0, 0]
+z = zeros((3, 2))  # 3,2 помещаются в дополнительные скобки, чтобы представлять из себя один объект
+print(z)
 
-for i in l:
-    d[int(i[0])][0] += float(i[2])
-    d[int(i[0])][1] += 1
+a = arange(10, 30, 5)  # функция arange аналогична функции range, но возвращает массив
+print()
+print(a)
+print()
 
+lin = linspace(0, 2, 9)
+print(lin)
 
-for key, value in d.items():
-    if value[1] != 0:
-        print(key, value[0]/value[1])
-    else:
-        print(key, '-')
+b = arange(12)
+print(b)
+b = b.reshape(4, 3)  # меняет размерность массива
+print(b)
+
+a = array([10, 20, 30])
+b = arange(3)
+print(a, b)
+print(a + b)  # арифметические операции на массивах выполняются поэлементно
+print(a - b)
+print(a ** 2)
+
+print(a)
+a = 2 * sin(a)  # массив можно передать как аргумент какой-то функции и тогда
+print(a)        # эта функция будет применена к каждому элементу массива
+
+# '''
+
+a = array([10, 20, 30])
+print(a < 20)
