@@ -1,44 +1,77 @@
-from numpy import *
-# '''
-a = array([1,2,3])
-print(a)
-print(a.ndim)   # размерность массива (одномерный, двумерный итд)
-print(a.shape)  # размеры массива(число строк столбцов итд)
+from pylab import *
+from matplotlib import *
 
-b = array([(1.5, 2, 3), (4, 5, 6)])  # создание двумерного массива из двух последовательностей чисел
-print(b)  # все числа имееют один тип - число с плавающей точкой
-print(b.ndim)
-print(b.shape)
-print(b.size)
+x = linspace(0, 5, 10)
+y = x**2
+print(x)
+print(y)
+'''
+# способ построение графика 1
+# %matplotlib inline #не сработало(должно построить прям в консоле?)
+figure()
+plot(x, y, 'black')
+xlabel('x')
+ylabel('y')
+title('title')
+show()
+'''
 
-z = zeros((3, 2))  # 3,2 помещаются в дополнительные скобки, чтобы представлять из себя один объект
-print(z)
+'''
+# способ построения графика 2
+fig = plt.figure()
+axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])
 
-a = arange(10, 30, 5)  # функция arange аналогична функции range, но возвращает массив
-print()
-print(a)
-print()
+axes.plot(x, y, 'r')
+axes.set_xlabel('x')
+axes.set_ylabel('y')
+axes.set_title('title1')  # чтобы не отображалась строка <matplotlib.text.Text at ...> в конце можно
+show()
+'''
 
-lin = linspace(0, 2, 9)
-print(lin)
+'''
+# строим 2 графика сразу
+fig = plt.figure()
 
-b = arange(12)
-print(b)
-b = b.reshape(4, 3)  # меняет размерность массива
-print(b)
+axes1 = fig.add_axes([0.1, 0.1, 0.8, 0.8])  # main axes
+axes2 = fig.add_axes([0.2, 0.5, 0.4, 0.3])  # inset доп axes
 
-a = array([10, 20, 30])
-b = arange(3)
-print(a, b)
-print(a + b)  # арифметические операции на массивах выполняются поэлементно
-print(a - b)
-print(a ** 2)
+# main figure
+axes1.plot(x, y, 'r')
+axes1.set_xlabel('x')
+axes1.set_ylabel('y')
+axes1.set_title('title')
 
-print(a)
-a = 2 * sin(a)  # массив можно передать как аргумент какой-то функции и тогда
-print(a)        # эта функция будет применена к каждому элементу массива
+# insert
+axes2.plot(y, x, 'g')
+axes2.set_xlabel('x')
+axes2.set_ylabel('y')
+axes2.set_title('insert title');
 
-# '''
+show()  # показываем все
+'''
 
-a = array([10, 20, 30])
-print(a < 20)
+'''
+# строим 2 графика отдельно 
+fig, axes = plt.subplot(nrows=1, ncols=2)  # не заработало...
+for ax in axes:
+    ax.plot(x, y, 'r')
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_title('title')
+fig.tight_layout()
+'''
+
+'''
+# с регулировкой размера 
+fig = plt.subplot(figsize=(12, 3))  # не заработало..
+axes = plt.subplot(figsize=(12, 3))
+axes.plot(x, y, 'r')
+axes.set_xlabel('x')
+axes.set_ylabel('y')
+axes.set_title('title')
+# show()
+'''
+
+
+
+
