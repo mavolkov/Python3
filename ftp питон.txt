@@ -1,0 +1,19 @@
+from ftplib import FTP
+
+ftp = FTP('192.168.43.193')
+ftp.login('misha', '123456')
+
+'''
+host = input('Введите адрес сервера: ').strip()
+login = input('Введите логин: ').strip()
+password = input('Введите пароль: ').strip()
+ftp = FTP(host)
+ftp.login(login, password)
+'''
+
+print()
+ftp.__class__.encoding = "utf-8"  # для отображения кириллицы
+for i in ftp.nlst():
+    print(i)
+
+# ftp.delete('Изображения/5.png')
