@@ -17,3 +17,11 @@ for i in ftp.nlst():
     print(i)
 
 # ftp.delete('Изображения/5.png')
+
+'''
+host = str(input(‘Host?: ‘))
+ftp_user = str(input(‘User? :’))
+ftp_password = str(input(‘Password? :’))
+после чего каждую переменную подключим к авторизации: 
+ftp = ftplib.FTP(host, ftp_user, ftp_password)
+'''
