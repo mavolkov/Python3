@@ -25,3 +25,15 @@ ftp_password = str(input(‘Password? :’))
 после чего каждую переменную подключим к авторизации: 
 ftp = ftplib.FTP(host, ftp_user, ftp_password)
 '''
+
+x = input()
+y = input()
+
+try:
+    result = int(x)/int(y)
+except (ZeroDivisionError, ValueError, TypeError):
+    print('ошибка =(')
+else:
+    print('result is', result)
+finally:
+    print('end')
